@@ -20,14 +20,15 @@ Route::get('/', function () {
 Route::get('/login', 'LoginController@show');
 
 // Sign your bar up to use bargo
-Route::get('/register-bar', function () {
-    return view('signup');
+Route::get('/register', function () {
+    return view('register');
 });
 
 // Get started with bargo with a quick tutorial and set your information.
 Route::get('/getting-started', function () {
     return "<h1>Getting Started</h1>";
 });
+
 
 // Bar's informational page.
 Route::get('/{barName}', function ($barName) {
