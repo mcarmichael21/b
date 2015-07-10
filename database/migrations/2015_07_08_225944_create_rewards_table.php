@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\Schema;
 
 class CreateRewardsTable extends Migration
 {
@@ -13,7 +14,7 @@ class CreateRewardsTable extends Migration
     public function up()
     {
         //
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('rewards', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->string('type');
@@ -35,5 +36,6 @@ class CreateRewardsTable extends Migration
     public function down()
     {
         //
+        Schema::drop('rewards');
     }
 }
